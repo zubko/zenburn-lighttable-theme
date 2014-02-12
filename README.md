@@ -1,4 +1,3 @@
-
 [Light Table](http://www.lighttable.com) theme based on [Emacs Zenburn theme](https://github.com/bbatsov/zenburn-emacs).
 
 It my be a bit different from [original one for Vim](http://slinky.imukuppi.org/zenburnpage/). I just wanted to have the same _Zenburn_ theme that I have in _Emacs_. Anyways because _LightTable_ uses _CodeMirror_ and _CodeMirror_'s syntax highlight is different from the _Emacs_'s one the colors aren't exactly the same either. But generally I'm satisfied with the result for now. 
@@ -9,23 +8,23 @@ Copyright (c) 2014 by Alexander Zubko. [The MIT License (MIT)](LICENSE)
 
 ### Examples
 
-- ####ClojureScript
+#### - ClojureScript
 
 <img src="https://github.com/wisenomad/zenburn-lighttable-theme/wiki/images/clojurescript.png" alt="ClojureScript Screenshot" width="524">
 
-- ####Clojure
+#### - Clojure
 
 <img src="https://github.com/wisenomad/zenburn-lighttable-theme/wiki/images/clojure.png" alt="Clojure Screenshot" width="526">
 
-- ####HTML
+#### - HTML
 
 <img src="https://github.com/wisenomad/zenburn-lighttable-theme/wiki/images/html.png" alt="HTML Screenshot" width="532">
 
-- ####CSS
+#### - CSS
 
 <img src="https://github.com/wisenomad/zenburn-lighttable-theme/wiki/images/css.png" alt="CSS Screenshot" width="527">
 
-- ####JavaScript
+#### - JavaScript
 
 <img src="https://github.com/wisenomad/zenburn-lighttable-theme/wiki/images/javascript.png" alt="JavaScript Screenshot" width="525">
 
