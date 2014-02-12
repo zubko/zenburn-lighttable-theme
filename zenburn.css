@@ -1,0 +1,215 @@
+/**
+ *  Using Zenburn color palette from the Emacs Zenburn Theme
+ *  https://github.com/bbatsov/zenburn-emacs/blob/master/zenburn-theme.el
+ *
+ *  Also using parts of https://github.com/xavi/coderay-lighttable-theme
+ */
+/*
+  Making UI around editor look consistent with Zenburn theme.
+  Some of these are actually more related to LT 'skin' then to LT 'theme',
+  but it seems too much for now to add additional files and configs just
+  to change these values.
+*/
+#multi.theme-zenburn .tabsets {
+  background: #4f4f4f;
+}
+#multi.theme-zenburn .content {
+  background: #3f3f3f;
+}
+#multi.theme-zenburn .list .active {
+  background: #3f3f3f;
+}
+#multi.theme-zenburn .list li:hover {
+  background: #3f3f3f;
+}
+.CodeMirror-gutters {
+  background: #3f3f3f !important;
+}
+#statusbar {
+  background: #4f4f4f;
+}
+/*
+  Default color.
+  In .clj files this matches var names, ex. the 'v' in (def v 3) .
+*/
+.cm-s-zenburn {
+  background-color: #3f3f3f;
+  color: #dcdccc;
+}
+/*
+  In .clj files this matches functions/macros like not, nil?, merge...
+*/
+.cm-s-zenburn span.cm-builtin {
+  color: #dcdccc;
+  font-weight: bold;
+}
+/*
+  Comment
+*/
+.cm-s-zenburn span.cm-comment {
+  color: #7f9f7f;
+}
+/*
+  In .clj files this matches Clojure functions/macros like defn, def, let...
+*/
+.cm-s-zenburn span.cm-keyword {
+  color: #f0dfaf;
+  font-weight: bold;
+}
+/*
+  In .clj files this matches Clojure keywords like :a, :bb...
+*/
+.cm-s-zenburn span.cm-atom {
+  color: #bfebbf;
+}
+/*
+  In .css files this matches directives like @media.
+  In .js files this matches function parameters.
+*/
+.cm-s-zenburn span.cm-def {
+  color: #dcdccc;
+}
+.cm-s-zenburn span.cm-variable {
+  color: #dfaf8f;
+}
+.cm-s-zenburn span.cm-variable-2 {
+  color: #dcdccc;
+}
+.cm-s-zenburn span.cm-string {
+  color: #cc9393;
+}
+.cm-s-zenburn span.cm-string-2 {
+  color: #cc9393;
+}
+.cm-s-zenburn span.cm-number {
+  color: #dcdccc;
+}
+/*
+  In .html this matches tags
+*/
+.cm-s-zenburn span.cm-tag {
+  color: #93e0e3;
+}
+/*
+  In .html files this matches attribute names like href, class, placeholder...
+  In .css files this matches property names like color, height, width...
+*/
+.cm-s-zenburn span.cm-property {
+  color: #dfaf8f;
+}
+.cm-s-zenburn span.cm-attribute {
+  color: #dfaf8f;
+}
+/*
+  In .css file this matches class names like .class-name)
+*/
+.cm-s-zenburn span.cm-qualifier {
+  color: #7cb8bb;
+}
+/*
+  In .html files this matches the <!DOCTYPE html> declaration.
+  In .less files matches the variables
+*/
+.cm-s-zenburn span.cm-meta {
+  color: #f0dfaf;
+}
+/*
+  Not tested
+*/
+.cm-s-default span.cm-header {
+  color: #f0efd0;
+}
+.cm-s-default span.cm-operator {
+  color: #f0efd0;
+}
+/*
+  Controls matching and non-matching brackes
+*/
+.cm-s-zenburn span.CodeMirror-matchingbracket {
+  box-sizing: border-box;
+  background: transparent;
+  border-bottom: 1px solid;
+}
+.cm-s-zenburn span.CodeMirror-nonmatchingbracket {
+  border-bottom: 1px solid;
+  background: none;
+}
+/*
+  Bracket colors. Not using rainbow colors.
+*/
+.cm-s-zenburn span.cm-rainbow.cm-bracket {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket1 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket2 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket3 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket4 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket5 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket6 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket7 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket8 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket9 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket10 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket11 {
+  color: #a0a090;
+}
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket12 {
+  color: #a0a090;
+}
+/*
+  Active line. Can't make it work for now
+*/
+.cm-s-zenburn .CodeMirror-activeline {
+  background: #000000;
+}
+.cm-s-zenburn .CodeMirror-activeline-background {
+  background: #000000;
+}
+/*
+  Selected text
+*/
+.cm-s-zenburn .CodeMirror-selected {
+  background: #4f4f4f;
+}
+.cm-s-zenburn .CodeMirror-focused .CodeMirror-selected {
+  background: #4f4f4f;
+}
+/*
+  Searching
+*/
+.cm-s-zenburn span.CodeMirror-searching {
+  background: #5f5f5f;
+  color: #ffffef !important;
+}
+.cm-s-zenburn span.CodeMirror-searching-active {
+  background: #bc8383;
+  color: #ffffef !important;
+}
+.cm-s-zenburn .cm-searching {
+  background: #5f5f5f;
+  color: #ffffef !important;
+}
+.cm-s-zenburn .searching-current {
+  background: #bc8383;
+  color: #ffffef !important;
+}

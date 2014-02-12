@@ -1,0 +1,182 @@
+/**
+ *  Using Zenburn color palette from the Emacs Zenburn Theme
+ *  https://github.com/bbatsov/zenburn-emacs/blob/master/zenburn-theme.el
+ *
+ *  Also using parts of https://github.com/xavi/coderay-lighttable-theme
+ */
+
+//
+// `-p-N' (plus) suffixes indicate that the color is lighter.
+// `-m-N' (minus) suffixes indicate that the color is darker.
+//
+@zenburn-fg-p-1:     #FFFFEF;
+@zenburn-fg:         #DCDCCC;
+@zenburn-fg-m-05:    #A0A090;
+@zenburn-fg-m-1:     #656555;
+@zenburn-bg-m-2:     #000000;
+@zenburn-bg-m-1:     #2B2B2B;
+@zenburn-bg-m-05:    #383838;
+@zenburn-bg:         #3F3F3F;
+@zenburn-bg-p-1:     #4F4F4F;
+@zenburn-bg-p-2:     #5F5F5F;
+@zenburn-bg-p-3:     #6F6F6F;
+@zenburn-red-p-1:    #DCA3A3;
+@zenburn-red:        #CC9393;
+@zenburn-red-m-1:    #BC8383;
+@zenburn-red-m-2:    #AC7373;
+@zenburn-red-m-3:    #9C6363;
+@zenburn-red-m-4:    #8C5353;
+@zenburn-orange:     #DFAF8F;
+@zenburn-yellow:     #F0DFAF;
+@zenburn-yellow-m-1: #E0CF9F;
+@zenburn-yellow-m-2: #D0BF8F;
+@zenburn-yellow-p-1: #F0EFD0;
+@zenburn-green-m-1:  #5F7F5F;
+@zenburn-green:      #7F9F7F;
+@zenburn-green-p-1:  #8FB28F;
+@zenburn-green-p-2:  #9FC59F;
+@zenburn-green-p-3:  #AFD8AF;
+@zenburn-green-p-4:  #BFEBBF;
+@zenburn-cyan:       #93E0E3;
+@zenburn-blue-p-1:   #94BFF3;
+@zenburn-blue:       #8CD0D3;
+@zenburn-blue-m-1:   #7CB8BB;
+@zenburn-blue-m-2:   #6CA0A3;
+@zenburn-blue-m-3:   #5C888B;
+@zenburn-blue-m-4:   #4C7073;
+@zenburn-blue-m-5:   #366060;
+@zenburn-magenta:    #DC8CC3;
+
+
+/*
+  Making UI around editor look consistent with Zenburn theme.
+  Some of these are actually more related to LT 'skin' then to LT 'theme',
+  but it seems too much for now to add additional files and configs just
+  to change these values.
+*/
+@zenburn-background: @zenburn-bg;
+#multi.theme-zenburn .tabsets { background: @zenburn-bg-p-1; }
+#multi.theme-zenburn .content { background: @zenburn-background; }
+#multi.theme-zenburn .list .active { background: @zenburn-background; }
+#multi.theme-zenburn .list li:hover { background: @zenburn-background; }
+.CodeMirror-gutters { background: @zenburn-background !important; }
+#statusbar { background: @zenburn-bg-p-1; }
+
+/*
+  Default color.
+  In .clj files this matches var names, ex. the 'v' in (def v 3) .
+*/
+.cm-s-zenburn { background-color: @zenburn-background; color: @zenburn-fg }
+
+/*
+  In .clj files this matches functions/macros like not, nil?, merge...
+*/
+.cm-s-zenburn span.cm-builtin { color: @zenburn-fg; font-weight: bold; }
+
+/*
+  Comment
+*/
+.cm-s-zenburn span.cm-comment { color: @zenburn-green; }
+
+/*
+  In .clj files this matches Clojure functions/macros like defn, def, let...
+*/
+.cm-s-zenburn span.cm-keyword { color: @zenburn-yellow; font-weight: bold; }
+
+/*
+  In .clj files this matches Clojure keywords like :a, :bb...
+*/
+.cm-s-zenburn span.cm-atom { color: @zenburn-green-p-4; }
+
+
+/*
+  In .css files this matches directives like @media.
+  In .js files this matches function parameters.
+*/
+.cm-s-zenburn span.cm-def { color: @zenburn-fg; }
+
+.cm-s-zenburn span.cm-variable { color: @zenburn-orange; }
+.cm-s-zenburn span.cm-variable-2 { color: @zenburn-fg; }
+.cm-s-zenburn span.cm-string { color: @zenburn-red; }
+.cm-s-zenburn span.cm-string-2 { color: @zenburn-red; }
+.cm-s-zenburn span.cm-number { color: @zenburn-fg; }
+
+/*
+  In .html this matches tags
+*/
+.cm-s-zenburn span.cm-tag { color: @zenburn-cyan; }
+
+/*
+  In .html files this matches attribute names like href, class, placeholder...
+  In .css files this matches property names like color, height, width...
+*/
+.cm-s-zenburn span.cm-property { color: @zenburn-orange; }
+.cm-s-zenburn span.cm-attribute { color: @zenburn-orange; }
+
+/*
+  In .css file this matches class names like .class-name)
+*/
+.cm-s-zenburn span.cm-qualifier { color: @zenburn-blue-m-1; }
+
+/*
+  In .html files this matches the <!DOCTYPE html> declaration.
+  In .less files matches the variables
+*/
+.cm-s-zenburn span.cm-meta { color: @zenburn-yellow; }
+
+/*
+  Not tested
+*/
+.cm-s-default span.cm-header { color: @zenburn-yellow-p-1; }
+.cm-s-default span.cm-operator { color: @zenburn-yellow-p-1; }
+
+/*
+  Controls matching and non-matching brackes
+*/
+.cm-s-zenburn span.CodeMirror-matchingbracket {
+  box-sizing: border-box;
+  background: transparent;
+  border-bottom: 1px solid;
+}
+.cm-s-zenburn span.CodeMirror-nonmatchingbracket {
+  border-bottom: 1px solid;
+  background: none;
+}
+
+/*
+  Bracket colors. Not using rainbow colors.
+*/
+@zenburn-bracket: @zenburn-fg-m-05;
+.cm-s-zenburn span.cm-rainbow.cm-bracket { color: @zenburn-bracket; } // color for bracket beyond listed number
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket1 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket2 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket3 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket4 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket5 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket6 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket7 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket8 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket9 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket10 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket11 { color: @zenburn-bracket; }
+.cm-s-zenburn span.cm-rainbow.cm-bracket.cm-bracket12 { color: @zenburn-bracket; }
+
+/*
+  Active line. Can't make it work for now
+*/
+.cm-s-zenburn .CodeMirror-activeline { background: @zenburn-bg-m-2; }
+.cm-s-zenburn .CodeMirror-activeline-background { background: @zenburn-bg-m-2; }
+
+/*
+  Selected text
+*/
+.cm-s-zenburn .CodeMirror-selected { background: @zenburn-bg-p-1; }
+.cm-s-zenburn .CodeMirror-focused .CodeMirror-selected { background: @zenburn-bg-p-1; }
+
+/*
+  Searching
+*/
+.cm-s-zenburn span.CodeMirror-searching { background: @zenburn-bg-p-2; color: @zenburn-fg-p-1 !important; }
+.cm-s-zenburn span.CodeMirror-searching-active { background: @zenburn-red-m-1; color: @zenburn-fg-p-1 !important; }
+.cm-s-zenburn .cm-searching { background: @zenburn-bg-p-2; color: @zenburn-fg-p-1 !important; }
+.cm-s-zenburn .searching-current { background: @zenburn-red-m-1; color: @zenburn-fg-p-1 !important; }
