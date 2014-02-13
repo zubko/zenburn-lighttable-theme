@@ -56,3 +56,5 @@ Using [Less CSS pre-processor](http://lesscss.org) for making _CSS_ with support
 - Highlight active line.
 
 - Consider using _CSS_ with _var_ params (without _Less_) if possible as can be found in skin files of _LightTable_.
+
+- Add version with more contrast.
